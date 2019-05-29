@@ -1,0 +1,103 @@
+原生模块(不需要指定地址) 第三方模块(node_moules不需要指定地址)  自定义模块
+
+
+
+module.exports可以把类，方法，数组，对象公布给外部文件
+exports 只能以引用的方式把值或对象公布给外部
+
+
+
+npm install forever --save  -->package.json
+npm install -g forever     -->全局
+npm install forever   --->局部
+
+
+commonjs(require,export,module.exports)
+
+
+自定义模块需要指定路径
+var t=require('路径');//接收文件
+{如果一个类要给其他文件使用}
+module.exports=类名;//原文件
+或
+module.exports={
+    'bb':function(){
+        console.log("xx");
+    }
+
+}
+或
+exports.bb=function(){
+    console.log("xx");
+}
+不能写【
+直接赋值
+exports={
+    'bb':function(){//报错 bb不是方法
+        console.log("xx");
+    }
+}】
+
+
+面试问题：exports与module.exports的区别
+[[[exports是module.exports的引用 exports指向的地址与module.exports指向的地址一致
+require才能找到module.exports
+
+exports的值改变时，地址将改变
+
+module.exports可以把类，方法，数组，对象公布给外部文件
+exports 只能以引用的方式把值或对象公布给外部
+
+强类型语言与弱类型语言
+直接赋值与引用赋值
+var a=4;  0xa12b3c
+a=5;      0x23a2w     直接赋值]]]
+
+
+
+
+var obj={   //obj未变
+    'a':4  //obj下的属性
+}
+obj.a=5;//引用赋值
+
+面试问题：node下有哪些模块是不需要自动加载{直接使用}
+global(_ _ dirname /_ _filename....)方法(重点)
+process 方法(重点)
+timer
+console
+module
+
+
+
+//触发条件(时间I/o 磁盘I/O 自定义事件[emit，addListener on]) 
+
+fs文件系统
+fs.readFile()//异步读文件
+
+
+是不是callback一定是异步的？
+不是，回调函数也可以是同步的
+
+
+
+
+三码一致
+文件编码  ANSI Unicode UTF-8
+浏览器解码 gbk/gb2312/gb18030 UTF-8
+数据库解码 UTF-8
+
+http四大关键字-->get post delete put
+
+
+
+
+
+
+
+
+
+
+
+
+

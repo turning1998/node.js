@@ -1,0 +1,39 @@
+<!--
+
+    Function instanceof Object;    //true
+    Array     instanceof Object;   //true
+    Object    instanceof Array;      //false
+    Object     instanceof Function;   //true 
+
+在ES5下：Function 是方法; 类; 构造函数
+
+类 既是类也是构造函数
+function Demo(){           //基于对象 
+    var c=3;
+    this.a=123;
+    this.b=function(){
+        console.log('xx');
+    }
+}
+var demo=new Demo();
+demo.b();
+console.log(Demo.a);     //123
+console.log(demo.c);  //undefiend
+
+//实现 new
+
+console.log(Demo.prototype==demo.__proto__);//true
+
+
+
+
+
+
+
+
+class A{                //面向继承
+
+}
+
+
+-->

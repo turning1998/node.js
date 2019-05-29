@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var start =new Date();
+        setTimeout(function(){
+            var end=new Date();
+            console.log('Time is :',(end-start),'ms');
+        },500);
+        while(new Date()-start<1000){}
+       
+       
+        //node-->1000
+      /*   
+      (1)function给事件队列
+      function(){
+            var end=new Date();
+            console.log('Time is :',(end-start),'ms');
+        } */
+    //chrome/ 可能 1001,1002,1003 因为chrome对定时器的定义和处理不一样
+//firefox可能1033ms 1036ms
+
+//node与chorome的定时器不一样
+
+    
+
+    
+    </script>
+    
+</body>
+</html>

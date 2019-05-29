@@ -1,0 +1,31 @@
+<!--setTimeout /set 宏任务-->
+<!--
+    执行宏任务：
+    (1)当前线程空闲   （同步是否执行完）
+    (2)满足触发条件  
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("start");
+        for(var i=0;i<5;i++){         //5 5 5 5 5 全局
+            setTimeout(function(){    //加入到异步队列里
+                console.log(i);  //局部i   作用域链-->找到全局5    
+            },0);
+        }
+        console.log("end");
+    
+    
+    </script>
+    
+</body>
+</html>
