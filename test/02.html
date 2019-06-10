@@ -8,7 +8,7 @@
     <script>
         var start =new Date();//（1）
         setTimeout(function(){  //（1）给事件循环  （满足触发条件（1000>500）,
-            //但当前进程不空闲;当进程空闲就立即执行
+            //但当前进程不空闲;当进程空闲就立即执行  {时间不能等待}
             var end=new Date();
             console.log('Time is :',(end-start),'ms');
         },500);
