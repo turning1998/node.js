@@ -1,4 +1,4 @@
-<!--setTimeout /set 宏任务-->
+<!--setTimeout /  setInterval宏任务-->
 <!--
     执行宏任务：
     (1)当前线程空闲   （同步是否执行完）
@@ -16,15 +16,18 @@
 </head>
 <body>
     <script>
+/*js解释器先从上向下
+   先找出同步代码和异步代码,当遇到异步代码,给事件队列 
+   {异步代码执行条件：当前线程空闲(即同步是否执行完) 满足触发条件  ） 
+*/
         console.log("start");
         for(var i=0;i<5;i++){         //5 5 5 5 5 全局
-            setTimeout(function(){    //加入到异步队列里
-                console.log(i);  //局部i   作用域链-->找到全局5    
+            setTimeout(function(){    //加入到异步队列5次
+                console.log(i);  //for循环执行完i=4,并且i++     作用域链-->找到全局5    
             },0);
         }
         console.log("end");
-    
-    
+      
     </script>
     
 </body>

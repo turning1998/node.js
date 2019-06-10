@@ -2,23 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
     <script>
-        var start =new Date();
-        setTimeout(function(){
+        var start =new Date();//（1）
+        setTimeout(function(){  //（1）给事件循环  （满足触发条件（1000>500）,
+            //但当前进程不空闲;当进程空闲就立即执行
             var end=new Date();
             console.log('Time is :',(end-start),'ms');
         },500);
-        while(new Date()-start<1000){}
+        while(new Date()-start<1000){} //(2)while空跑1000ms
        
        
-        //node-->1000
+        //node环境-->1000
       /*   
-      (1)function给事件队列
+      (1)function事件队列
       function(){
             var end=new Date();
             console.log('Time is :',(end-start),'ms');
