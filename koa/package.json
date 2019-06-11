@@ -1,0 +1,31 @@
+{
+  "name": "koa",
+  "version": "1.0.0",
+  "description": "koa的学习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turning1998/koa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/turning1998/koa/issues"
+  },
+  "homepage": "https://github.com/turning1998/koa#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-views": "^6.2.0"
+  },
+  "devDependencies": {
+    "ms": "^2.1.2"
+  }
+}
